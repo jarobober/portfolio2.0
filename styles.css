@@ -182,10 +182,12 @@ h1 {
     font-size: 1.5rem;
     line-height: 140%;
     font-weight: 300;
+    z-index: 2000;
 }
 
 #typing {
     position: relative;
+    z-index: 1;
 }
 
 #typing::after {
@@ -195,6 +197,7 @@ h1 {
     width: 1px;
     height: 1.8rem;
     border-right: 1px solid #000000;
+    z-index: 1;
 }
 
 .scroll-down {
@@ -212,46 +215,40 @@ h1 {
 
 /* !!!!!!!!!!!!!!! SECTION ABOUT ME !!!!!!!!!!!!!!! */
 
-#my-photo {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 30vh;
+#about-me {
+    padding-top: 2rem;
 }
 
+.about-me__content {
+width: 90%;
+margin: 50px auto;
+}  
+
+
 .my-photo {
-    background-image:url(me_photo_s.jpg);
+    float: left;
+    background-image:url(me_photo_x.jpg);
     background-size: cover;
-    transition: .5s;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
+    height: 200px;
+    width: 200px;
+    clip-path: circle(50%);
+    shape-outside: circle(50%);
+    shape-margin: 2px;
 }
 
 .text-container {
-    display: flex;
-    flex-direction: column;
+    
+    font-size: 0.8rem;
+    color: black;
+    
 }
 
 .text-container p {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    line-height: 130%;
+    margin-bottom: 1em;
+    
 }
 
-.text-container p:nth-of-type(1),
-.text-container p:nth-of-type(3) {
-    text-align: right;
-    margin-left: 15%;
-}
 
-.text-container p:nth-of-type(2) {
-    background-color: #3C91E6;
-    color: #ffffff;
-    text-align: left;
-    margin-right: 15%;
-}
 
 
 /* !!!!!!!!!!!!!!! SECTION MY WORK !!!!!!!!!!!!!!! */
@@ -454,14 +451,11 @@ footer p {
 
     h1 {
         font-size: 1.8rem;
+        
     }
 
     #typing::after {
         height: 2.1rem;
-    }
-
-    .text-container {
-        padding: 0 3rem;
     }
 
     .portfolio__item {
@@ -491,7 +485,7 @@ footer p {
     }
 
     .skill-icons-container {
-        margin: 2rem 0;
+        margin: 2rem 0 5rem 0;
         padding: 0 8rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -525,10 +519,6 @@ footer p {
         padding: 20% 35% 40% 15%;
     }
 
-    #my-photo {
-        height: 60vh;
-    }
-
     .nav-btn__wrapper:hover + .nav {
         background-color: #000000;
         transition: .3s ease;
@@ -558,23 +548,46 @@ footer p {
         background-color: rgb(212, 212, 212);
     }
 
-    #my-photo {
-        width: 87%;
-        margin: 0 auto;
-        height: 450px;
-    }
-
     .my-photo {
-        background-image:url(me_photo.jpg);
+        float: left;
+        background-image:url(me_photo_x.jpg);
+        background-size: cover;
+        height: 450px;
+        width: 450px;
+        clip-path: circle(50%);
+        shape-outside: circle(50%);
+        
+    }
+    
+    .about-me__content {
+        width: 80%;
+        margin: 100px auto;
+    }  
+
+    .text-container {
+        
+        font-size: 100%;
+        line-height: 120%;
+        color: black;
+        
+    }
+    
+    .text-container p {
+        margin-bottom: 2.5em;
+        
     }
 
     .left-shutter {
         position: absolute;
         left: 0;
         width: 15vw;
-        height: 200%;
+        height: 250%;
         background-color: rgb(212, 212, 212);
         z-index: 1000;
+    }
+
+    .portfolio__item {
+        height: 500px;
     }
 
     .portfolio__item__info {
