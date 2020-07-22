@@ -233,7 +233,7 @@ margin: 50px auto;
     width: 200px;
     clip-path: circle(50%);
     shape-outside: circle(50%);
-    shape-margin: 2px;
+    margin-right: 10px;
 }
 
 .text-container {
@@ -270,6 +270,7 @@ margin: 50px auto;
     background-position: center;
     background-size: cover;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 
 .portfolio__item__info {
@@ -288,6 +289,7 @@ margin: 50px auto;
     -moz-transition: .3s ease;
     -ms-transition: .3s ease;
     -o-transition: .3s ease;
+    cursor: auto;
     
 }
 
@@ -323,6 +325,10 @@ margin: 50px auto;
     
 }
 
+.cinemify {
+    background-image: url(work/cinemify.png);
+}
+
 .quiz {
     background-image: url(work/casaquiz.png);
 }
@@ -341,23 +347,30 @@ margin: 50px auto;
     padding-top: 2rem;
 }
 
+.skill-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .skill-icons-container {
     margin: 2rem 0;
-    padding: 0 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
     width: 100%;
     justify-items: center;
-    
+    align-items: center;
+}
+
+.skill-icons-container div {
+    font-size: 3rem;
+    text-align: center;
 }
 
 .skill-icons-container div ion-icon {
-    font-size: 3rem;
-}
-
-.skill-icons-container div p {
-    text-align: center;
+    font-size: 4rem;
 }
 
 
@@ -490,7 +503,7 @@ footer p {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2rem;
-        grid-row-gap: 4rem;
+        grid-row-gap: 3rem;
         width: 100%;
         justify-items: center;
     }
@@ -556,7 +569,7 @@ footer p {
         width: 450px;
         clip-path: circle(50%);
         shape-outside: circle(50%);
-        
+        margin-right: 15px;
     }
     
     .about-me__content {
@@ -581,7 +594,7 @@ footer p {
         position: absolute;
         left: 0;
         width: 15vw;
-        height: 250%;
+        height: 400%;
         background-color: rgb(212, 212, 212);
         z-index: 1000;
     }
